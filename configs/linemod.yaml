@@ -1,0 +1,22 @@
+model: 'cat_v0'
+model_dir: 'data/model'
+network: 'res'
+heads: ''
+task: 'rdopt'
+gpus: (0,)
+resume: true
+
+train:
+    optim: 'adam'
+    lr: 1e-3
+    epoch: 500
+    milestones: (100, 200, 300, 400, 500)
+    gamma: 0.5
+    batch_size: 4
+    dataset: 'LinemodTrain'
+    sampler: 'image_size'
+    weight_decay: 0.
+    num_workers: 8
+test:
+    dataset: 'LinemodTest'
+    batch_size: 1

@@ -1,0 +1,7 @@
+setup.py
+./src/camera_jacobian.cpp
+./src/camera_jacobian_kernel.cu
+camera_jacobian.egg-info/PKG-INFO
+camera_jacobian.egg-info/SOURCES.txt
+camera_jacobian.egg-info/dependency_links.txt
+camera_jacobian.egg-info/top_level.txt
