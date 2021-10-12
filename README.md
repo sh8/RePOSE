@@ -72,7 +72,7 @@ Please choose the one category you like (replace `ape` with another category) an
 
 ### Evaluate the ADD(-S) score
 
-1. Generate the data for `ape`:
+1. Generate the annotation data:
     ```
     python run.py --type linemod cls_type ape model ape
     ```
@@ -88,7 +88,7 @@ Please choose the one category you like (replace `ape` with another category) an
 ### Visualization
 
 
-1. Generate the data for `ape`:
+1. Generate the annotation data:
     ```
     python run.py --type linemod cls_type ape model ape
     ```
