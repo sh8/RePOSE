@@ -48,7 +48,7 @@ def run_evaluate():
         output = outputs[i]
         evaluator.evaluate(output, batch)
 
-    print('Average Elapsed Time', tot_elapsed_time / tot_valid_cnt)
+    print('Average FPS', 1000 / (tot_elapsed_time / tot_valid_cnt))
     evaluator.summarize()
 
 
