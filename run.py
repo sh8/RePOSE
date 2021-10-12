@@ -12,10 +12,8 @@ def run_evaluate():
     import torch
     from lib.networks import make_network
     from lib.utils.net_utils import load_network
-    from torch.nn import DataParallel
 
     network = make_network(cfg).cuda()
-    nextwork = DataParallel(network)
     load_network(network, cfg.model_dir, epoch=cfg.test.epoch)
     network.eval()
 
