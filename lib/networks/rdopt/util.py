@@ -41,33 +41,7 @@ def rot_mat_to_qua(mat):
     qua = torch.cat((w, x, y, z), dim=1)
     return qua
 
-
-def rot_vec_to_mat_with_R(vec, R):
-    bs = vec.shape[0]
-
-    theta = torch.norm(vec, dim=1)
-    wx = vec[:, 0] / theta
-    wy = vec[:, 1] / theta
-    wz = vec[:, 2] / theta
-
-    costheta = torch.cos(theta)
-    sintheta = torch.sin(theta)
-
-    # R = torch.zeros((bs, 3, 3), device=vec.device)
-
-    R[:, 0, 0] = costheta + wx * wx * (1 - costheta)
-    R[:, 1, 0] = wz * sintheta + wx * wy * (1 - costheta)
-    R[:, 2, 0] = -wy * sintheta + wx * wz * (1 - costheta)
-    R[:, 0, 1] = wx * wy * (1 - costheta) - wz * sintheta
-    R[:, 1, 1] = costheta + wy * wy * (1 - costheta)
-    R[:, 2, 1] = wx * sintheta + wy * wz * (1 - costheta)
-    R[:, 0, 2] = wy * sintheta + wx * wz * (1 - costheta)
-    R[:, 1, 2] = -wx * sintheta + wy * wz * (1 - costheta)
-    R[:, 2, 2] = costheta + wz * wz * (1 - costheta)
-
-    return R
-
-
+@torch.jit.script
 def rot_vec_to_mat(vec):
     bs = vec.shape[0]
 
