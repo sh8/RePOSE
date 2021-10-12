@@ -101,5 +101,17 @@ Please choose the one category you like (replace `ape` with another category) an
     python run.py --type visualize --cfg_file configs/linemod.yaml test.dataset LinemodOccTest cls_type ape model ape
     ```
 
+### Citation
+```
+@InProceedings{Iwase_2021_ICCV,
+    author    = {Iwase, Shun and Liu, Xingyu and Khirodkar, Rawal and Yokota, Rio and Kitani, Kris M.},
+    title     = {RePOSE: Fast 6D Object Pose Refinement via Deep Texture Rendering},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {3303-3312}
+}
+```
+
 ### Acknowledgement
 Our code is largely based on [clean-pvnet](https://github.com/zju3dv/clean-pvnet) and our rendering code is based on [neural\_renderer](https://github.com/daniilidis-group/neural_renderer). Thank you so much for making these codes publicly available!
