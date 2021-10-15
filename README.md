@@ -1,4 +1,4 @@
-# RePOSE: Iterative Rendering and Refinement for 6D Object Detection (ICCV2021)
+# RePOSE: Iterative Rendering and Refinement for 6D Object Detection (ICCV2021) [[Link](https://arxiv.org/abs/2104.00633)]
 
 ![overview](./assets/teaser.png)
 
