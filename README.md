@@ -101,7 +101,7 @@ Please choose the one category you like (replace `ape` with another category) an
     python run.py --type visualize --cfg_file configs/linemod.yaml test.dataset LinemodOccTest cls_type ape model ape
     ```
 
-### Citation
+## Citation
 ```
 @InProceedings{Iwase_2021_ICCV,
     author    = {Iwase, Shun and Liu, Xingyu and Khirodkar, Rawal and Yokota, Rio and Kitani, Kris M.},
@@ -113,8 +113,8 @@ Please choose the one category you like (replace `ape` with another category) an
 }
 ```
 
-### Acknowledgement
+## Acknowledgement
 Our code is largely based on [clean-pvnet](https://github.com/zju3dv/clean-pvnet) and our rendering code is based on [neural\_renderer](https://github.com/daniilidis-group/neural_renderer). Thank you so much for making these codes publicly available!
 
-### Contact
+## Contact
 If you have any questions about the paper and implementation, please feel free to email me (siwase@cs.cmu.edu)! Thank you!
