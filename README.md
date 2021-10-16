@@ -115,3 +115,6 @@ Please choose the one category you like (replace `ape` with another category) an
 
 ### Acknowledgement
 Our code is largely based on [clean-pvnet](https://github.com/zju3dv/clean-pvnet) and our rendering code is based on [neural\_renderer](https://github.com/daniilidis-group/neural_renderer). Thank you so much for making these codes publicly available!
+
+### Contact
+If you have any questions about the paper and implementation, please feel free to email me (siwase@cs.cmu.edu)! Thank you!
