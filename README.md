@@ -15,6 +15,7 @@ We present RePOSE, a fast iterative refinement method for 6D object pose estimat
 - [LineMOD Dataset](https://zjueducn-my.sharepoint.com/:u:/g/personal/pengsida_zju_edu_cn/EXK2K0B-QrNPi8MYLDFHdB8BQm9cWTxRGV9dQgauczkVYQ?e=beftUz)
 - [LineMOD Orig Dataset](https://zjueducn-my.sharepoint.com/:u:/g/personal/pengsida_zju_edu_cn/EaoGIPguY3FAgrFKKhi32fcB_nrMcNRm8jVCZQd7G_-Wbg?e=ig4aHk)
 - [Occlusion LineMOD Dataset](https://zjueducn-my.sharepoint.com/:u:/g/personal/pengsida_zju_edu_cn/ESXrP0zskd5IvvuvG3TXD-4BMgbDrHZ_bevurBrAcKE5Dg?e=r0EgoA)
+- [3D Models](https://drive.google.com/file/d/1RWx9AOvvyxfDsyQFlhbwrjoD_oHxM59M/view?usp=sharing)
 - [Pretrained Models](https://drive.google.com/file/d/17dvpjsTThB-8ZOsnHE_6BlELlFmVxi5m/view?usp=sharing)
 - [Cached Files for LineMOD](https://drive.google.com/drive/folders/1QNwa34OBo7lSncd-VWHSx-0ch08si-rA?usp=sharing)
 - [Cached Files for Occlusion LineMOD](https://drive.google.com/drive/folders/1ufM_-qkQqqWUY0H0PV1fQGL1GYluksKz?usp=sharing)
