@@ -1,13 +1,9 @@
-# RePOSE: Iterative Rendering and Refinement for 6D Object Detection (ICCV2021)
+# RePOSE: Iterative Rendering and Refinement for 6D Object Detection (ICCV2021) [[Link](https://arxiv.org/abs/2104.00633)]
 
 ![overview](./assets/teaser.png)
 
 ## Abstract
 We present RePOSE, a fast iterative refinement method for 6D object pose estimation. Prior methods perform refinement by feeding zoomed-in input and rendered RGB images into a CNN and directly regressing an update of a refined pose. Their runtime is slow due to the computational cost of CNN, which is especially prominent in multiple-object pose refinement. To overcome this problem, RePOSE leverages image rendering for fast feature extraction using a 3D model with a learnable texture. We call this deep texture rendering, which uses a shallow multi-layer perceptron to directly regress a view-invariant image representation of an object. Furthermore, we utilize differentiable Levenberg-Marquardt (LM) optimization to refine a pose fast and accurately by minimizing the feature-metric error between the input and rendered image representations without the need of zooming in. These image representations are trained such that differentiable LM optimization converges within few iterations. Consequently, RePOSE runs at 92 FPS and achieves state-of-the-art accuracy of 51.6% on the Occlusion LineMOD dataset - a 4.1% absolute improvement over the prior art, and comparable result on the YCB-Video dataset with a much faster runtime.
-
-## Overview
-This is the implementation of RePOSE based on [clean-pvnet](https://github.com/zju3dv/clean-pvnet).
-To test our pretrained models and see both quantitative and qualitative results, please follow the instructions.
 
 ## Prerequisites
 - Python >= 3.6
@@ -76,7 +72,7 @@ Please choose the one category you like (replace `ape` with another category) an
 
 ### Evaluate the ADD(-S) score
 
-1. Generate the data for `ape`:
+1. Generate the annotation data:
     ```
     python run.py --type linemod cls_type ape model ape
     ```
@@ -92,7 +88,7 @@ Please choose the one category you like (replace `ape` with another category) an
 ### Visualization
 
 
-1. Generate the data for `ape`:
+1. Generate the annotation data:
     ```
     python run.py --type linemod cls_type ape model ape
     ```
@@ -105,5 +101,20 @@ Please choose the one category you like (replace `ape` with another category) an
     python run.py --type visualize --cfg_file configs/linemod.yaml test.dataset LinemodOccTest cls_type ape model ape
     ```
 
-### Acknowledgement
+## Citation
+```
+@InProceedings{Iwase_2021_ICCV,
+    author    = {Iwase, Shun and Liu, Xingyu and Khirodkar, Rawal and Yokota, Rio and Kitani, Kris M.},
+    title     = {RePOSE: Fast 6D Object Pose Refinement via Deep Texture Rendering},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2021},
+    pages     = {3303-3312}
+}
+```
+
+## Acknowledgement
 Our code is largely based on [clean-pvnet](https://github.com/zju3dv/clean-pvnet) and our rendering code is based on [neural\_renderer](https://github.com/daniilidis-group/neural_renderer). Thank you so much for making these codes publicly available!
+
+## Contact
+If you have any questions about the paper and implementation, please feel free to email me (siwase@cs.cmu.edu)! Thank you!
