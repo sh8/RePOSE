@@ -381,8 +381,6 @@ def _linemod_to_coco(cls, split):
         json.dump(instance, f)
 
 
-def linemod_to_coco(cfg, only_test=False):
-    if not only_test:
-        _linemod_to_coco(cfg.cls_type, 'train')
+def linemod_to_coco(cfg):
     _linemod_to_coco(cfg.cls_type, 'test')
     _linemod_to_coco(cfg.cls_type, 'occ')
