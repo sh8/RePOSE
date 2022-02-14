@@ -1,5 +1,4 @@
 adabound==0.0.5
--e git+git@github.com:sh8/rdopt.git@7601bca4818a03ef1ace1e0c1df396ccec56003f#egg=camera_jacobian&subdirectory=lib/csrc/camera_jacobian
 certifi==2020.4.5.1
 cffi==1.14.0
 chardet==3.0.4
