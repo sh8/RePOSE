@@ -70,6 +70,10 @@ class RDOPT(nn.Module):
             output['t'] = x[:, 3:]
             output['vertices'] = vertices
             return output, 0.0, False
+        
+        if not self.training:
+            x_all = torch.zeros((MAX_NUM_OF_GN + 1, 6), device=x.device)
+            x_all[0] = x[0]
 
         start = torch.cuda.Event(enable_timing=True)
         end = torch.cuda.Event(enable_timing=True)
@@ -93,10 +97,17 @@ class RDOPT(nn.Module):
             J = torch.bmm(grad_xy, J_c)
             J = J.reshape(bs, -1, OUT_CHANNELS, 6)
             x = self.gn(x, e, J)
+            
+            if not self.training:
+                x_all[i + 1] = x[0]
 
         output['R'] = x[:, :3]
         output['t'] = x[:, 3:]
         output['vertices'] = vertices
+        
+        if not self.training:
+            output['R_all'] = x_all[:, :3]
+            output['t_all'] = x_all[:, 3:]
 
         end.record()
         torch.cuda.synchronize()
